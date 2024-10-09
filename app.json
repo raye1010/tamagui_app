@@ -1,14 +1,21 @@
 {
   "expo": {
-    "name": "tamagui_app",
+    "name": "TamaguiApp",
     "slug": "tamagui_app",
-    "version": "1.0.0",
-
     "scheme": "tamagui_app",
+    "version": "1.0.0",
     "web": {
       "bundler": "metro",
       "output": "static",
       "favicon": "./assets/favicon.png"
+    },
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
     },
     "plugins": [
       "expo-router",
@@ -17,32 +24,37 @@
         {
           "launchMode": "most-recent"
         }
-      ]
+      ],
+      "expo-localization"
     ],
     "experiments": {
       "typedRoutes": true,
-
-      "tsconfigPaths": true
+      "tsconfigPaths": true,
+      "baseUrl": "/tamagui_app"
     },
-
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-
-    "userInterfaceStyle": "light",
-
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "UIViewControllerBasedStatusBarAppearance": false
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#a5977c"
+      },
+      "package": "com.raye1010.tamagui_app"
+    },
+    "__androidStatusBar" : {
+      "backgroundColor": "#bbac84",
+      "translucent": false
+    },
+    "extra": {
+      "eas": {
+        "projectId": "ad254eee-2a9e-4d87-93db-ed4c37f2dfd8"
       }
     }
   }
